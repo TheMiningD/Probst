@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Setting up Probst - Probst</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atelier-forest-light.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Probst</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../players/players/" class="nav-link">Players</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../hosts/" class="nav-link">Hosts</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#setting-up-probst" class="nav-link">Setting up Probst</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#players" class="nav-link">Players</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#adding-a-player" class="nav-link">Adding a player</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#viewing-players" class="nav-link">Viewing players</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#removing-players" class="nav-link">Removing players</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#tribes" class="nav-link">Tribes</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#swapping-tribes" class="nav-link">Swapping tribes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#voting" class="nav-link">Voting</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#setting-parchment-photo" class="nav-link">Setting parchment photo</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#setting-voting-channel" class="nav-link">Setting voting channel</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="setting-up-probst">Setting up Probst</h1>
+<p><br></p>
+<h1 id="players">Players</h1>
+<h2 id="adding-a-player">Adding a player</h2>
+<p>To add a player, use <code>/addplayer</code> with their name, user and tribe.</p>
+<p><img alt="Screenshot" src="../img/addplayer.png" />
+<br>
+<em>Adding @kris, with the name 'Kris' in the Roku tribe</em>
+<br></p>
+<h2 id="viewing-players">Viewing players</h2>
+<p>Use <code>/listplayers</code> followed by the tribe to view all players in a tribe. <br>
+<code>/listplayers all</code> will list all players, sorted by tribe.
+<br></p>
+<h2 id="removing-players">Removing players</h2>
+<p>Use <code>/removeplayers</code> followed by the @user you would like to remove to remove a player. <br> This will automatically remove them from all of their alliance channels, and send a 'Player Removed' message in each. If there is only one person remaining in the alliance channel after they are removed, an 'Alliance Archived' message will be sent and the alliance will be locked.
+<br></p>
+<h1 id="tribes">Tribes</h1>
+<h2 id="swapping-tribes">Swapping tribes</h2>
+<p>To swap the tribe of a player, you can use <code>/swaptribe</code>, followed by their @user and new tribe.
+<br>
+If you want to swap an entire tribe into a new tribe (for a merge, for example), you can use <code>/swapalltribe</code>, with the tribe you want players to be swapped from and the new tribe you want players to be swapped into. 
+<br></p>
+<h1 id="voting">Voting</h1>
+<h2 id="setting-parchment-photo">Setting parchment photo</h2>
+<p>Probst allows for players to use a command to cast votes.
+<br>
+To set this up, you must use the <code>/settings</code> command.</p>
+<p>To set your parchment image, send the image into discord, right click and press 'copy image link'. Delete everything past the question mark.</p>
+<p><img alt="Screenshot" src="../img/deletethis.png" />
+<br> <em>Remove everything highlighted in blue</em></p>
+<p>Use <code>/settings</code>, select parchment and send the rest of the link to set it as your parchment photo.</p>
+<p><img alt="Screenshot" src="../img/parchment.png" /></p>
+<h2 id="setting-voting-channel">Setting voting channel</h2>
+<p>The voting channel is the channel where votes submitted by players will be collected as they come in. Make sure this is a channel players cannot see.
+<br>
+Use <code>/settings</code>, select vote-channel and select a channel for votes to be collected.
+<img alt="Screenshot" src="../img/votechannel.png" />
+<br>
+Votes will appear in the channel as they come in like this.
+<img alt="Screenshot" src="../img/castvote.png" /></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
